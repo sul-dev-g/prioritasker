@@ -1,6 +1,6 @@
 const navLinks = document.querySelector(".nav-links");
-const toggleMenuButton = document.querySelector("#toggle-menu-button");
-const toggleMenuIcon = document.querySelector("#toggle-menu-icon");
+const toggleMenuButton = document.querySelector(".toggle-menu-button");
+const toggleMenuIcon = document.querySelector(".toggle-menu-icon");
 
 toggleMenuButton.addEventListener("click", (event) => {
   const containsBarsIcon = toggleMenuIcon.classList.contains("fa-bars");
