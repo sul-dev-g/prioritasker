@@ -1,0 +1,53 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+menu,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Base styles */
+:root {
+  --dominant-blue: blue;
+  --secondary-green: green;
+  --accent-red: red;
+}
+
+body {
+  /* background: var(--dominant-blue); */
+}
+
+/* Utility classes */
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 1rem;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: var(--accent-red);
+}
+.hide {
+  display: none;
+}
+
+/* Navbar */
+.free-demo {
+  margin: 0 1rem 0 auto;
+}
