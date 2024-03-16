@@ -17,6 +17,9 @@ a {
   --dominant-blue: blue;
   --secondary-green: green;
   --accent-red: red;
+
+  --translate-45: translate(45deg);
+  --translate-315: translate(315deg);
 }
 
 body {
@@ -47,7 +50,44 @@ body {
   display: none;
 }
 
+/* Hamburger menu */
+#toggle-menu-button {
+  width: 2.2rem;
+  height: 2.2rem;
+  min-height: 2.2rem;
+  position: relative;
+}
+.top-bar {
+  position: absolute;
+  top: 0;
+}
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+}
+.center-vertically {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.line {
+  height: 5px;
+  width: 100%;
+  background: black;
+  border: none;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.rotate-45 {
+  rotate: 45deg;
+}
+.rotate-315 {
+  rotate: 315deg;
+}
+
 /* Navbar */
 .free-demo {
   margin: 0 1rem 0 auto;
 }
+/* position: sticky */
