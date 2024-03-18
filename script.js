@@ -2,6 +2,8 @@
 const toggleMenuButton = document.querySelector("#toggle-menu-button");
 const toggleMenuIcon = document.querySelector("#toggle-menu-icon");
 const line = document.querySelector(".line");
+const getStartedBtn = document.querySelector(".get-started");
+const showMobileNavLinks = document.querySelector(".show-mobile-nav-links");
 
 // Click hamburger event listener
 toggleMenuButton.addEventListener("click", openMenu);
@@ -21,5 +23,14 @@ function openMenu() {
   hamburgerTopBar.classList.toggle("center-vertically");
 
   // Show nav links
-  navLinks.classList.toggle("hide");
+  navLinks.classList.toggle("show-mobile-nav-links");
 }
+// show in overlay but not in nav
+// if(window.screen.width >= 650px) {
+// showMobileNavLinks display: none; else
+// } else {
+//
+// }
+// Show desktop navLinks
+// Hide mobileNavLInks on screen sizes > 650px
+//
