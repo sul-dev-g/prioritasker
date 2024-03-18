@@ -25,12 +25,3 @@ function openMenu() {
   // Show nav links
   navLinks.classList.toggle("show-mobile-nav-links");
 }
-// show in overlay but not in nav
-// if(window.screen.width >= 650px) {
-// showMobileNavLinks display: none; else
-// } else {
-//
-// }
-// Show desktop navLinks
-// Hide mobileNavLInks on screen sizes > 650px
-//

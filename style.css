@@ -24,6 +24,7 @@ a {
 
 body {
   /* background: var(--dominant-blue); */
+  color: var(--secondary-green);
 }
 
 /* Utility classes */
@@ -92,6 +93,9 @@ body {
 }
 
 /* Navbar */
+#navbar {
+  background: var(--dominant-blue);
+}
 #logo {
   z-index: 2;
 }
@@ -139,6 +143,7 @@ body {
     align-items: center;
     justify-content: center;
   }
+
   #toggle-menu-button {
     display: none;
   }
