@@ -37,7 +37,7 @@ a {
 
 /*--------------------------Base styles--------------------*/
 body {
-  background: var(--dominant-blue);
+  /* background: var(--dominant-blue); */
   color: var(--secondary-green);
   font-family: "Outfit", sans-serif;
   font-size: var(--fs-md);
@@ -240,6 +240,27 @@ img {
 }
 #how-it-works .steps .step p {
   margin-bottom: 1rem;
+}
+
+/*---------------------------Plans---------------------------*/
+#plans .plans {
+  display: flex;
+  flex: 1 150px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+#plans .plans .plan-container {
+  background: var(--green-tint-3);
+  padding: 3rem;
+}
+#plans h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#plans .plans .plan-container:nth-of-type(1) {
+  background-color: var(--blue-tint-1);
+  color: #fff;
 }
 
 /*------------------------Media queries---------------------*/
