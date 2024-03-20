@@ -292,6 +292,25 @@ img {
   margin-bottom: 1rem;
 }
 
+/*--------------------------CTA--------------------------*/
+#cta .cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cta .light-bulb {
+  position: relative;
+  color: var(--green-tint-3);
+  opacity: 0.2;
+}
+#cta .cta-text {
+  position: absolute;
+  padding: 2rem;
+}
+#cta .cta-text p {
+  margin: 1rem 0;
+}
+
 /*------------------------Media queries---------------------*/
 
 @media screen and (max-width: 767px) {
