@@ -33,6 +33,7 @@ a {
   text-decoration: none;
   color: #fff;
   font-family: "Outfit", sans-serif;
+  cursor: pointer;
 }
 
 /*--------------------------Base styles--------------------*/
@@ -314,14 +315,18 @@ img {
 /*--------------------------FAQs----------------------------*/
 #faqs details:not(:nth-of-type(4)) {
   width: 100%;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid var(--green-tint-3);
 }
 #faqs details {
   padding: 1rem;
   padding-left: 0;
 }
+#faqs details:focus {
+  outline: none;
+}
 #faqs summary {
   padding: 1rem;
+  color: var(--green-tint-3);
 }
 
 /*--------------------------Footer------------------------*/
@@ -338,7 +343,7 @@ img {
 #footer .optin {
   margin-top: 1rem;
 }
-#footer .newsletter-optin input[type="button"] {
+#footer .newsletter-optin input[type="submit"] {
   background: var(--accent-red);
   color: #fff;
 }
