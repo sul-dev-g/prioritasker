@@ -37,7 +37,7 @@ a {
 
 /*--------------------------Base styles--------------------*/
 body {
-  /* background: var(--dominant-blue); */
+  background: var(--dominant-blue);
   color: var(--secondary-green);
   font-family: "Outfit", sans-serif;
   font-size: var(--fs-md);
@@ -45,7 +45,7 @@ body {
 
 section,
 header {
-  margin: 0.75rem 0;
+  margin: 4rem 0;
 }
 
 h1,
@@ -87,6 +87,9 @@ img {
   display: block;
   width: fit-content;
   margin-bottom: 0.7rem;
+}
+.section-heading {
+  margin: 2rem 0;
 }
 
 /* --------------------------Navbar------------------------- */
@@ -176,7 +179,7 @@ img {
   gap: 2rem;
 }
 #hero hgroup {
-  margin: 2rem 0 1.5rem;
+  margin-bottom: 2rem;
 }
 #hero hgroup h1 {
   margin-bottom: 1rem;
@@ -194,6 +197,9 @@ img {
 #hero .ctas .btn.btn-outline {
   color: var(--red-tint-1);
   border-color: var(--red-tint-1);
+}
+#hero .hero-text {
+  margin: 0;
 }
 
 /*--------------------------Features-------------------------- */
@@ -219,16 +225,11 @@ img {
   padding: 0.75rem;
   border-radius: 50%;
 }
-#features .features-heading {
-  padding-inline: 1rem;
-  margin: 2rem 0;
-}
 
 /*------------------------How it works---------------------*/
 #how-it-works .steps {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
   gap: 1rem;
 }
 #how-it-works .steps .step {
@@ -245,22 +246,20 @@ img {
 /*---------------------------Plans---------------------------*/
 #plans .plans {
   display: flex;
-  flex: 1 150px;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
 }
 #plans .plans .plan-container {
   background: var(--green-tint-3);
   padding: 3rem;
-}
-#plans h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+  flex: 1;
 }
 #plans .plans .plan-container:nth-of-type(1) {
   background-color: var(--blue-tint-1);
   color: #fff;
+}
+#plans .plan-benefits {
+  margin: 1rem 0 1.2rem;
 }
 
 /*-------------------------Testimonial----------------------*/
@@ -286,10 +285,7 @@ img {
   padding: 2rem;
   background-color: var(--blue-tint-1);
   color: #fff;
-  min-width: 300px;
-}
-#testimonials h2 {
-  margin-bottom: 1rem;
+  min-width: 260px;
 }
 
 /*--------------------------CTA--------------------------*/
@@ -302,13 +298,77 @@ img {
   position: relative;
   color: var(--green-tint-3);
   opacity: 0.2;
+  max-width: 30vw;
+  z-index: -1;
 }
 #cta .cta-text {
+  z-index: -1;
   position: absolute;
   padding: 2rem;
+  text-align: center;
 }
 #cta .cta-text p {
   margin: 1rem 0;
+}
+
+/*--------------------------FAQs----------------------------*/
+#faqs details:not(:nth-of-type(4)) {
+  width: 100%;
+  border-bottom: 1px solid green;
+}
+#faqs details {
+  padding: 1rem;
+  padding-left: 0;
+}
+#faqs summary {
+  padding: 1rem;
+}
+
+/*--------------------------Footer------------------------*/
+#footer {
+}
+#footer .newsletter-optin {
+  background-color: grey;
+  text-align: center;
+}
+#footer .optin input {
+  border: none;
+  padding: 1rem;
+}
+#footer .optin {
+  margin-top: 1rem;
+}
+#footer .newsletter-optin input[type="button"] {
+  background: var(--accent-red);
+  color: #fff;
+}
+#footer .footer-sections {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  width: 100%;
+}
+#footer .socials {
+  text-align: center;
+  margin: 1rem;
+}
+#footer .socials > *:not(:last-child) {
+  margin-right: 2rem;
+}
+#footer .footer-heading {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+#footer .footer-links {
+  margin-top: 0.25rem;
+}
+#footer .legal .footer-links {
+  margin-bottom: 2rem;
+}
+#footer .footer-links > * {
+  padding: 0.5rem 0;
+}
+#footer .copyright {
 }
 
 /*------------------------Media queries---------------------*/
