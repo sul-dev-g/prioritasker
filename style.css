@@ -263,6 +263,35 @@ img {
   color: #fff;
 }
 
+/*-------------------------Testimonial----------------------*/
+#testimonials .testimonials {
+  display: flex;
+  gap: 1rem;
+  overflow: scroll;
+}
+#testimonials .testimonials .headshot {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+}
+#testimonials .testimonials .fa-quote-left {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+#testimonials .testimonials li {
+  padding: 2rem;
+  background-color: var(--blue-tint-1);
+  color: #fff;
+  min-width: 300px;
+}
+#testimonials h2 {
+  margin-bottom: 1rem;
+}
+
 /*------------------------Media queries---------------------*/
 
 @media screen and (max-width: 767px) {
