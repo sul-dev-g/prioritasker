@@ -93,6 +93,7 @@ img {
 #navbar {
   position: sticky;
   top: 0;
+  background-color: hsl(219, 100%, 23%);
 }
 
 #navbar .navbar-container {
@@ -203,7 +204,7 @@ img {
 }
 #features .feature {
   background-color: var(--green-tint-2);
-  padding: 1.75rem;
+  padding: 4rem 2rem;
 }
 #features .feature .feature-contents h3 {
   font-size: 1.7rem;
@@ -221,6 +222,24 @@ img {
 #features .features-heading {
   padding-inline: 1rem;
   margin: 2rem 0;
+}
+
+/*------------------------How it works---------------------*/
+#how-it-works .steps {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+#how-it-works .steps .step {
+  margin-bottom: 1rem;
+  flex: 1 200px;
+}
+#how-it-works .steps .step:nth-of-type(4) {
+  margin-bottom: 4rem;
+}
+#how-it-works .steps .step p {
+  margin-bottom: 1rem;
 }
 
 /*------------------------Media queries---------------------*/
