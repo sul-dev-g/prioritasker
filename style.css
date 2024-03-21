@@ -35,6 +35,10 @@ a {
   font-family: "Outfit", sans-serif;
   cursor: pointer;
 }
+/* button {} */
+.white {
+  background-color: #fff;
+}
 
 /*--------------------------Base styles--------------------*/
 body {
@@ -91,6 +95,12 @@ img {
 }
 .section-heading {
   margin: 2rem 0;
+}
+.text-black {
+  color: black;
+}
+.hidden {
+  display: none;
 }
 
 /* --------------------------Navbar------------------------- */
@@ -330,8 +340,6 @@ img {
 }
 
 /*--------------------------Footer------------------------*/
-#footer {
-}
 #footer .newsletter-optin {
   background-color: grey;
   text-align: center;
@@ -373,9 +381,64 @@ img {
 #footer .footer-links > * {
   padding: 0.5rem 0;
 }
-#footer .copyright {
+
+/*---------------------------App-------------------------- */
+.back-to-home {
+  color: #000;
+}
+#input {
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 1.1rem;
+}
+#input:focus {
+  outline: none;
+}
+.add-btn {
+  font-size: 1.1rem;
+}
+#tasks .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1rem;
+}
+.task-container {
+  padding: 1.8rem 1.2rem;
+  background-color: grey;
+}
+.task-contents {
+  margin-bottom: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid #000;
+}
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.task-actions > * {
+  flex: 1;
+}
+.task-actions button {
+  border: none;
+  font-family: "Outfit", sans-serif;
+}
+legend {
+  text-align: center;
+  background-color: lightgray;
+}
+.options-container {
+  display: flex;
+  justify-content: space-around;
+}
+.option {
+  padding: 4rem 0.4rem;
 }
 
+.done-btn {
+  width: 100%;
+  padding: 0.7rem;
+}
 /*------------------------Media queries---------------------*/
 
 @media screen and (max-width: 767px) {

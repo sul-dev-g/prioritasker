@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/db095d3dfc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Prioritasker | Home</title>
+  </head>
+  <body class="white">
+    <a class="back-to-home" href="index.html"><i class="fas fa-chevron-left"></i>Back to home</a>
+      <header id="add-task">
+        <div class="container">
+          <form>
+            <label for="input">Add tasks</label><br><br>
+            <div>
+              <input type="text" placeholder="Enter a task" name="" id="input" />
+              <button class="add-btn" type="submit">Add</button>
+            </div>
+          </form>
+          
+          <article id="quiz" class="task-questions hidden">
+              <p class="task-contents"></p>
+              <form action="">
+                <fieldset>
+                  <legend>Is this task Urgent or Not Urgent?</legend>
+                  <div class="options-container">
+                    <div class="option">
+                      <input type="radio" value="urgent" name="quiz-1" id="urgent">
+                      <label for="urgent">Urgent</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" value="not-urgent" name="quiz-1" id="not-urgent">
+                    <label for="not-urgent">Not Urgent</label>
+                  </div>
+                </div>
+              </fieldset><br>
+              
+              <fieldset>
+                <legend>Is this task Important or Not Important?</legend>
+                <div class="options-container">
+                  <div class="option">
+                    <input type="radio" value="important" name="quiz-2" id="important">
+                    <label for="important">Important</label>
+                  </div>
+                  <div class="option">
+                    <input type="radio" value="not-important" name="quiz-2" id="not-important">
+                    <label for="not-important">Not Important</label>
+                  </div>
+                </div>
+              </fieldset>
+              <br>
+              <button class="done-btn" type="submit">Done</button>
+            </form>
+            </article>
+
+          </div>
+      </header>
+
+      <ul id="tasks">
+      </ul>
+    </div>
+    </div>
+  </body>
+</html>
