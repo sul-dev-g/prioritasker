@@ -1,39 +1,40 @@
+/* Import fonts link */
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&family=Outfit&display=swap");
 
 :root {
-  /* Colour palette */
+  /* Create variables to access your colours in colour palette */
   --dominant-blue: #002976;
   --secondary-green: #00764d;
   --accent-red: #761301;
-
-  /* Colour variants */
   --green-tint-1: #499d80;
   --green-tint-2: #bddcd1;
   --green-tint-3: #e3fbf0;
   --blue-tint-1: #a4cce6;
-  --blue-tint-2: ;
+  --blue-tint-2: #335491;
   --red-tint-1: #ffe0da;
 
-  /* Font sizes */
+  /* Create font sizes variables for consistency */
   --fs-lg: 2.5rem;
   --fs-md: 1.2rem;
 }
 
 /*----------------------------Resets------------------------- */
+/* Remove default browser styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-menu,
-ul {
+
+/* Remove bullet points from lists */
+ul,
+li {
   list-style: none;
 }
+
+/* Remove underline from links */
 a {
   text-decoration: none;
-  color: #fff;
-  font-family: "Outfit", sans-serif;
-  cursor: pointer;
 }
 /* button {} */
 .white {
@@ -41,6 +42,12 @@ a {
 }
 
 /*--------------------------Base styles--------------------*/
+/* Add smooth scrolling to site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set the base colors and font */
 body {
   background: var(--dominant-blue);
   color: var(--secondary-green);
@@ -48,11 +55,7 @@ body {
   font-size: var(--fs-md);
 }
 
-section,
-header {
-  margin: 4rem 0;
-}
-
+/* Add typography styles */
 h1,
 h2 {
   font-family: "Figtree", sans-serif;
@@ -66,171 +69,158 @@ p {
   color: var(--green-tint-2);
 }
 
+/* Make images responsive */
 img {
   max-width: 100%;
 }
 
+/* Style links */
+a {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+}
+
 /*--------------------------Utilities---------------------*/
+/* Create a container to restrict content/center it */
 .container {
   max-width: 1200px;
   margin-inline: auto;
   padding: 0.75rem 1.25rem;
 }
-/* buttons */
+
+/* Create a primary button's styles */
 .btn {
   display: inline-block;
   padding: 0.7rem;
   background-color: var(--accent-red);
   cursor: pointer;
+  transition: transform 100ms ease-in;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
 }
+
+/* Add a transition effect to the button */
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Create a secondary button's styles */
 .btn.btn-outline {
   border: 2px solid var(--accent-red);
   background: none;
   color: var(--accent-red);
 }
-.btn.block {
-  display: block;
-  width: fit-content;
-  margin-bottom: 0.7rem;
-}
-.section-heading {
-  margin: 2rem 0;
-}
-.text-black {
-  color: black;
-}
+
+/* Hide an element in the DOM */
 .hidden {
   display: none;
 }
 
+/* Add space beneath each section heading */
+.section-heading {
+  padding-bottom: 1.5em;
+  font-size: 2em;
+}
+
+/* Add vertical spacing in each section */
+.section-padding {
+  padding-block: 3em;
+}
+
 /* --------------------------Navbar------------------------- */
+/* Make navbar stay at top of screen while scrolling */
 #navbar {
   position: sticky;
   top: 0;
-  background-color: hsl(219, 100%, 23%);
+  background-color: var(--dominant-blue);
+  opacity: 95%;
 }
 
-#navbar .navbar-container {
+/* Layout and align the navbar */
+#navbar .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-#navbar #logo {
-  margin-right: auto;
-  z-index: 2;
-}
+
+/* Set logo size */
 #navbar #logo img {
   width: 140px;
 }
-#navbar #nav-links > * {
-  padding-inline: 1rem;
+
+/* Add transition effect on navbar links */
+#nav-links li {
+  transition: transform 100ms ease-out;
 }
-#navbar .cta {
-  margin: 0 0.5rem 0 auto;
-  z-index: 1;
-  font-size: 0.9rem;
-}
-#navbar #toggle-menu-button {
-  width: 1.75rem;
-  height: 1.75rem;
-  position: relative;
-  z-index: 2;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-#navbar .bars {
-  height: 4px;
-  width: 100%;
-  background: var(--blue-tint-1);
-  border: none;
-}
-#navbar .top-bar {
-  position: absolute;
-  top: 0;
-}
-#navbar .bottom-bar {
-  position: absolute;
-  bottom: 0;
-}
-#navbar .show-mobile-nav-links {
-  background-color: var(--dominant-blue);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  min-width: 100vw;
-  min-height: 100vh;
-  text-align: center;
-  padding-top: 25vh;
-  display: flex;
-  flex-direction: column;
-}
-#navbar .show-mobile-nav-links > * {
-  margin-bottom: 11vh;
-}
-#navbar .center-vertically {
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-#navbar #toggle-menu-button .opacity-0 {
-  opacity: 0;
-}
-#navbar #toggle-menu-button .rotate-45 {
-  rotate: 45deg;
-}
-#navbar #toggle-menu-button .rotate-315 {
-  rotate: 315deg;
+#navbar #nav-links li:hover {
+  transform: translateY(-0.2rem);
 }
 
-/*------------------------------Hero---------------------------*/
-#hero .hero-container {
+/* Add spacing between each link */
+.nav-link {
+  padding-inline: 1em;
+}
+
+/*--------------------------Hero----------------------*/
+/* Create a responsive 2 column hero layout */
+#hero .container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
+  align-items: center;
 }
-#hero hgroup {
-  margin-bottom: 2rem;
-}
-#hero hgroup h1 {
-  margin-bottom: 1rem;
-}
-#hero hgroup p {
-  max-width: 670px;
-}
-#hero .btn.block {
-  margin-top: 0.2rem;
-}
-#hero .ctas p {
-  margin-bottom: 0.3rem;
-  color: var(--blue-tint-1);
-}
-#hero .ctas .btn.btn-outline {
-  color: var(--red-tint-1);
-  border-color: var(--red-tint-1);
-}
-#hero .hero-text {
-  margin: 0;
+#hero .container > * {
+  flex: 1;
 }
 
-/*--------------------------Features-------------------------- */
-#features .features-container {
+/* Set font size of hero heading */
+.hero-heading {
+  font-size: 2.5em;
+}
+
+/* Set the font size of hero text */
+#hero hgroup p {
+  font-size: 1.2em;
+  padding-block: 1.3em;
+}
+
+/* Add a border to cta button */
+.get-started-btn {
+  border: 2px solid var(--accent-red);
+  margin-right: 1em;
+}
+
+/* Change cta text color to white */
+#hero .how-it-works-btn {
+  color: var(--red-tint-1);
+  border: 2px solid var(--red-tint-1);
+  margin-top: 0.5em;
+}
+
+/*--------------------------Features--------------------- */
+/* Create responsive grid layout */
+.feature-cards-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
   grid-gap: 1em;
 }
-#features .feature {
+
+/* Style each feature cards */
+#features .feature-card-wrapper {
   background-color: var(--green-tint-2);
-  padding: 4rem 2rem;
+  padding: 2em;
+  border-radius: 25px;
 }
-#features .feature .feature-contents h3 {
+.feature-title {
   font-size: 1.7rem;
   margin: 1rem 0;
 }
-#features .feature p {
+.feature-description {
   color: var(--green-tint-3);
 }
-#features .feature i {
+.feature-icon {
   background-color: var(--accent-red);
   color: var(--green-tint-2);
   padding: 0.75rem;
@@ -238,88 +228,150 @@ img {
 }
 
 /*------------------------How it works---------------------*/
+/* Add spacing and change bg colour to lighter blue */
+#how-it-works {
+  background-color: var(--green-tint-1);
+}
+
+/* Add spacing to the summary text of how the application works */
+.how-it-works-summary {
+  font-size: 1.2em;
+  margin-bottom: 2.2em;
+}
+
+/* Layout cards to be responsive */
 #how-it-works .steps {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1em;
 }
-#how-it-works .steps .step {
+#how-it-works .step {
   margin-bottom: 1rem;
-  flex: 1 200px;
-}
-#how-it-works .steps .step:nth-of-type(4) {
-  margin-bottom: 4rem;
-}
-#how-it-works .steps .step p {
-  margin-bottom: 1rem;
+  flex: 1 14em;
+  background-color: var(--green-tint-3);
+  padding: 1.2em;
+  border-radius: 30px;
+  height: fit-content;
 }
 
-/*---------------------------Plans---------------------------*/
-#plans .plans {
+/* Add spacing between the directions and the image in each card*/
+.how-it-works-directions {
+  margin-bottom: 1em;
+  color: var(--green-tint-1);
+}
+
+/* Round the corners of the screenshot in each card */
+.how-it-works-screenshot {
+  border-radius: 30px;
+}
+
+/*--------------------------Plans-----------------------*/
+/* Make plans wrapper responsive */
+.plans-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2em;
 }
-#plans .plans .plan-container {
-  background: var(--green-tint-3);
-  padding: 3rem;
-  flex: 1;
+
+/* Style each plan card */
+.plan-card-wrapper {
+  background: var(--blue-tint-1);
+  color: var(--blue-tint-2);
+  padding: 2em;
+  border-radius: 20px;
+  flex: 1 250px;
 }
-#plans .plans .plan-container:nth-of-type(1) {
-  background-color: var(--blue-tint-1);
+
+/* Add spacing between elements in card */
+.plan-benefits {
+  margin-block: 1em;
   color: #fff;
+  margin-left: 1em;
 }
-#plans .plan-benefits {
-  margin: 1rem 0 1.2rem;
+
+/* Add spacing between each benefit in the list */
+.plan-benefit {
+  margin-block: 0.5em;
+  list-style: circle;
+}
+
+/* Change cta button background to blue */
+.plan-cta-btn {
+  background-color: var(--blue-tint-2);
 }
 
 /*-------------------------Testimonial----------------------*/
+/* Add background colour to section */
+#testimonials {
+  background-color: var(--green-tint-3);
+}
+
+/* Change colour of the testimonials heading */
+.testimonials-heading {
+  color: var(--secondary-green);
+}
+
+/* Make testimonials display inline and scrollable */
 #testimonials .testimonials {
   display: flex;
   gap: 1rem;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
-#testimonials .testimonials .headshot {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin-bottom: 2rem;
-  margin: 0 auto;
-}
-#testimonials .testimonials .fa-quote-left {
+
+/* Style quotation mark */
+#testimonials .fa-quote-left {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-#testimonials .testimonials li {
-  padding: 2rem;
-  background-color: var(--blue-tint-1);
-  color: #fff;
+
+/* Style each testimonial */
+#testimonials li {
+  padding: 2em;
   min-width: 260px;
+  border-right: 1px solid var(--green-tint-2);
+}
+
+/* Change colour of testimonial text */
+.testimonial-words {
+  color: var(--green-tint-1);
+}
+
+/* Remove right border from last testimonial */
+#testimonials li:last-child {
+  border: none;
+}
+
+/* Add space between testimonials and scrollbar */
+#testimonials .testimonials {
+  padding-bottom: 2rem;
+}
+
+/* Scrollbar styles */
+#testimonials .testimonials::-webkit-scrollbar {
+  width: 1px;
+}
+#testimonials .testimonials::-webkit-scrollbar-track {
+  background: var(--green-tint-2);
+  border-radius: 20px;
+}
+#testimonials .testimonials::-webkit-scrollbar-thumb {
+  background-color: var(--green-tint-1);
+  border-radius: 20px;
 }
 
 /*--------------------------CTA--------------------------*/
-#cta .cta-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#cta .light-bulb {
-  position: relative;
-  color: var(--green-tint-3);
-  opacity: 0.2;
-  max-width: 30vw;
-  z-index: -1;
-}
-#cta .cta-text {
-  z-index: -1;
-  position: absolute;
-  padding: 2rem;
+#cta {
   text-align: center;
+  background-color: var(--blue-tint-2);
 }
-#cta .cta-text p {
-  margin: 1rem 0;
+.light-bulb {
+  opacity: 0.2;
+  max-width: 300px;
+  margin-bottom: 1em;
+}
+.cta-description {
+  padding-block: 1.5em;
 }
 
 /*--------------------------FAQs----------------------------*/
@@ -329,134 +381,89 @@ img {
 }
 #faqs details {
   padding: 1rem;
-  padding-left: 0;
 }
 #faqs details:focus {
   outline: none;
 }
 #faqs summary {
   padding: 1rem;
+  padding-left: 0;
   color: var(--green-tint-3);
 }
 
 /*--------------------------Footer------------------------*/
-#footer .newsletter-optin {
-  background-color: grey;
+/* Style the newsletter optin */
+.newsletter {
+  background-color: var(--green-tint-2);
   text-align: center;
-}
-#footer .optin input {
-  border: none;
-  padding: 1rem;
-}
-#footer .optin {
-  margin-top: 1rem;
-}
-#footer .newsletter-optin input[type="submit"] {
-  background: var(--accent-red);
-  color: #fff;
-}
-#footer .footer-sections {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-  width: 100%;
-}
-#footer .socials {
-  text-align: center;
-  margin: 1rem;
-}
-#footer .socials > *:not(:last-child) {
-  margin-right: 2rem;
-}
-#footer .footer-heading {
-  font-size: 1.8rem;
-  margin-top: 1rem;
-}
-#footer .footer-links {
-  margin-top: 0.25rem;
-}
-#footer .legal .footer-links {
-  margin-bottom: 2rem;
-}
-#footer .footer-links > * {
-  padding: 0.5rem 0;
 }
 
-/*---------------------------App-------------------------- */
-.back-to-home {
-  color: #000;
+/* Increase heading font size */
+.newsletter-heading {
+  font-size: 2em;
 }
-#input {
+
+/* Add space between elements */
+.newsletter-description {
+  color: var(--green-tint-1);
+  font-size: 1.2em;
+  margin-block: 1.5em;
+}
+
+/* Style email optin button */
+.get-the-guide-btn {
+  color: #fff;
+  font-family: "Figtree", sans-serif;
   border: none;
-  border-bottom: 1px solid grey;
-  font-size: 1.1rem;
+  padding-block: 1.4em;
+  font-size: 0.8em;
+  border-radius: 30px;
 }
-#input:focus {
+
+/* Style the email input field */
+.email-input {
+  margin-top: 1em;
+  border: none;
+  width: 40%;
+  padding-inline: 1em;
+  padding-block: 1em;
+  font-size: 1em;
+  border-radius: 30px;
+  font-family: "Figtree", sans-serif;
+}
+
+/* Remove focus styles */
+.optin input:focus {
   outline: none;
 }
-.add-btn {
-  font-size: 1.1rem;
-}
-#tasks .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-  gap: 1rem;
-}
-.task-container {
-  padding: 1.8rem 1.2rem;
-  background-color: grey;
-}
-.task-contents {
-  margin-bottom: 1.2rem;
-  text-align: center;
-  padding: 1rem;
-  border: 2px solid #000;
-}
-.task-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-.task-actions > * {
-  flex: 1;
-}
-.task-actions button {
-  border: none;
-  font-family: "Outfit", sans-serif;
-}
-legend {
-  text-align: center;
-  background-color: lightgray;
-}
-.options-container {
-  display: flex;
-  justify-content: space-around;
-}
-.option {
-  padding: 4rem 0.4rem;
+
+/* Increase the font size of the links in the footer */
+.footer-link-groups {
+  font-size: 1.3em;
 }
 
-.done-btn {
-  width: 100%;
-  padding: 0.7rem;
+/* Create a responsive layout for each group of links in the footer */
+.footer-link-groups .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+/* Add space after each title for each group of links in the footer and increase the font size*/
+.group-of-links-title {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+/* Add space beneath each footer link */
+.footer-link {
+  margin-bottom: 1em;
+}
+
 /*------------------------Media queries---------------------*/
-
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 52em) {
   #nav-links {
-    display: none;
-  }
-  .show-mobile-nav-links {
-    display: flex !important;
-  }
-}
-@media screen and (min-width: 768px) {
-  #navbar #nav-links {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-  }
-  #navbar #toggle-menu-button {
-    display: none;
+    display: flex;
   }
   #hero .container {
     flex-direction: row;
