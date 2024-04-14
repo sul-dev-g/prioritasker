@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Prioritasker | Review task list</title>
+</head>
+<body>
+    <!---------------------- Review task list ---------------->
+    <section id="task-list-screen" class="hidden">
+        <header>
+          <div class="container">
+            <p class="sort-tasks">Sort tasks</p>
+            <!-- Create a container for all task filtering buttons -->
+            <div class="filter">
+              <!-- Create do now filter button -->
+              <button id="do-now" class="filter-task-list-btns btn">
+                TO DO NOW
+              </button>
+
+              <!-- Create schedule filter button -->
+              <button id="schedule" class="filter-task-list-btns btn">
+                TO SCHEDULE
+              </button>
+
+              <!-- Create delegate filter button -->
+              <button id="delegate" class="filter-task-list-btns btn">
+                TO DELEGATE
+              </button>
+
+              <!-- Create delete filter button -->
+              <button id="delete" class="filter-task-list-btns btn">
+                TO DELETE
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- List the tasks that need to be Done Now -->
+        <section id="tasks">
+          <div class="container">
+            <h1>Your Tasks (<span class="total-tasks"></span>)</h1>
+            <!-- Task list -->
+            <ul id="task-list"></ul>
+          </div>
+        </section>
+</body>
+</html>

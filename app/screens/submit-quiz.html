@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Prioritaker | Submit quiz</title>
+  </head>
+  <body>
+    <!----------------------- Answer quiz ------------------->
+    <section id="quiz-screen" class="hidden">
+      <!-- Show the users task in the header -->
+      <header id="header">
+        <div class="container">
+          <h1 class="your-task">Your task</h1>
+          <br />
+          <h2 class="quiz-title"></h2>
+        </div>
+      </header>
+
+      <!-- Ask the user questions about their task -->
+      <article id="answer-task-questions">
+        <div class="container">
+          <form id="submit-quiz-form">
+            <!-- Create the structure first part of questionnaire -->
+            <fieldset>
+              <!-- Question 1 -->
+              <legend>Is this task Urgent or Not Urgent?</legend>
+
+              <!-- Options -->
+              <ul class="options-container">
+                <!-- Option 1: Urgent -->
+                <li class="option">
+                  <input
+                    type="radio"
+                    value="urgent"
+                    name="quiz-1"
+                    id="urgent"
+                    required
+                  />
+                  <label for="urgent">Urgent</label>
+                </li>
+
+                <!-- Option 2: Not Urgent -->
+                <li class="option">
+                  <input
+                    type="radio"
+                    value="not-urgent"
+                    name="quiz-1"
+                    id="not-urgent"
+                    required
+                  />
+                  <label for="not-urgent">Not Urgent</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <br />
+
+            <!-- Create the structure of the second part of the questionairre -->
+            <fieldset>
+              <!-- Question 2 -->
+              <legend>Is this task Important or Not Important?</legend>
+
+              <!-- Options -->
+              <ul class="options-container">
+                <!-- Option 1: Important -->
+                <li class="option">
+                  <input
+                    type="radio"
+                    value="important"
+                    name="quiz-2"
+                    id="important"
+                    required
+                  />
+                  <label for="important">Important</label>
+                </li>
+
+                <!-- Option 2: Not Important -->
+                <li class="option">
+                  <input
+                    type="radio"
+                    value="not-important"
+                    name="quiz-2"
+                    id="not-important"
+                    required
+                  />
+                  <label for="not-important">Not Important</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <br />
+
+            <!-- Submit answers button -->
+            <button class="quiz-submit-btn btn" type="submit">
+              Submit answers
+            </button>
+          </form>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

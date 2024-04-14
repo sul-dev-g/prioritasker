@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Prioritasker | Task confirmation</title>
+  </head>
+  <body>
+    <!------------------ Show task confirmation message -------->
+    <section id="confirmation-screen" class="hidden">
+      <!-- Display a confirmation message to state that users task has been added -->
+      <article class="task-confirmation">
+        <div class="container">
+          <!-- Display a tick icon -->
+          <img src="../img/img-tick.svg" alt="tick icon" />
+
+          <!-- State the confirmation message -->
+          <p class="task-confirmation-msg">
+            <em>Task has been added successfully.</em>
+          </p>
+
+          <!-- Add a link for the user to add another task -->
+          <button class="add-another-task-btn btn">Add another task...</button>
+
+          <!-- Add a link for the user to review their current tasks -->
+          <a class="review-tasks-btn"
+            >Review your tasks <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
