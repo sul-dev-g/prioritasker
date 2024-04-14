@@ -203,9 +203,20 @@ input[type="radio"] {
   border-radius: 20px;
 }
 
+/* Task list */
 #task-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+#task-list .task-card {
+  flex: 1 100%;
+}
+
+#task-list-screen .sort-tasks {
+  margin-block: 2em;
+  text-align: center;
 }
 
 /* Increase font size of 'Your tasks()' heading */
@@ -217,7 +228,6 @@ input[type="radio"] {
 /* Style the screen where list of tasks are displayed */
 .task-card {
   background-color: #335491;
-  max-width: fit-content;
   padding: 1.5em 1.9em;
   border-radius: 15px;
   margin-bottom: 1em;
@@ -229,6 +239,7 @@ input[type="radio"] {
   font-size: 1.2em;
   margin-bottom: 0.5em;
   color: #e6eaf1;
+  padding-top: 0.5em;
 }
 
 /* Style task buttons */
@@ -261,9 +272,10 @@ h2 {
   top: 0;
   right: 0;
   color: #fff;
-  padding: 0.2em;
+  padding: 0.5em;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
+  font-size: 0.8em;
 }
 .task-directions.do-now {
   background-color: rgb(233, 194, 86);

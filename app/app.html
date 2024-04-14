@@ -32,6 +32,7 @@
                 placeholder="Enter a new task"
                 name=""
                 id="input"
+                required
               />
 
               <!-- Add a task button -->
@@ -62,29 +63,31 @@
                 <legend>Is this task Urgent or Not Urgent?</legend>
 
                 <!-- Options -->
-                <div class="options-container">
+                <ul class="options-container">
                   <!-- Option 1: Urgent -->
-                  <div class="option">
+                  <li class="option">
                     <input
                       type="radio"
                       value="urgent"
                       name="quiz-1"
                       id="urgent"
+                      required
                     />
                     <label for="urgent">Urgent</label>
-                  </div>
+                  </li>
 
                   <!-- Option 2: Not Urgent -->
-                  <div class="option">
+                  <li class="option">
                     <input
                       type="radio"
                       value="not-urgent"
                       name="quiz-1"
                       id="not-urgent"
+                      required
                     />
                     <label for="not-urgent">Not Urgent</label>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </fieldset>
 
               <br />
@@ -95,29 +98,31 @@
                 <legend>Is this task Important or Not Important?</legend>
 
                 <!-- Options -->
-                <div class="options-container">
+                <ul class="options-container">
                   <!-- Option 1: Important -->
-                  <div class="option">
+                  <li class="option">
                     <input
                       type="radio"
                       value="important"
                       name="quiz-2"
                       id="important"
+                      required
                     />
                     <label for="important">Important</label>
-                  </div>
+                  </li>
 
                   <!-- Option 2: Not Important -->
-                  <div class="option">
+                  <li class="option">
                     <input
                       type="radio"
                       value="not-important"
                       name="quiz-2"
                       id="not-important"
+                      required
                     />
                     <label for="not-important">Not Important</label>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </fieldset>
 
               <br />
@@ -161,7 +166,7 @@
       <section id="task-list-screen" class="hidden">
         <header>
           <div class="container">
-            <h2>Filter tasks</h2>
+            <p class="sort-tasks">Sort tasks</p>
             <!-- Create a container for all task filtering buttons -->
             <div class="filter">
               <!-- Create do now filter button -->

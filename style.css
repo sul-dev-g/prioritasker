@@ -379,16 +379,75 @@ a {
   width: 100%;
   border-bottom: 1px solid var(--green-tint-3);
 }
+
 #faqs details {
   padding: 1rem;
 }
+
 #faqs details:focus {
   outline: none;
 }
+
 #faqs summary {
   padding: 1rem;
   padding-left: 0;
   color: var(--green-tint-3);
+}
+
+/* --------------------- Form Styling -------------------- */
+#signup-form {
+  display: inline-block;
+  padding: 2em;
+  border-radius: 1.5em;
+  background-color: #499d80;
+}
+
+.form-fields li {
+  margin-bottom: 1em;
+}
+
+.form-fields label {
+  display: block;
+  margin-bottom: 0.7em;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.form-fields input {
+  font: 400 0.9em/1.6 "Figtree", sans-serif;
+  padding: 0.8em;
+  padding-inline: 1em;
+  border: none;
+  border-radius: 1.5em;
+  width: 100%;
+}
+
+.form-fields input:focus {
+  outline: none;
+}
+
+.required-tag {
+  font-size: 0.7em;
+  color: #761301;
+}
+
+.optional-tag {
+  font-size: 0.7em;
+  color: #335491;
+}
+
+#signup-form button {
+  border: none;
+  padding: 1em;
+  border-radius: 1.5em;
+  font: 400 0.7em/1.6 "Figtree", sans-serif;
+}
+
+#signup-btn {
+  width: 100%;
+  font-size: 0.8em !important;
+  background-color: darkslategray;
+  color: #fff;
 }
 
 /*--------------------------Footer------------------------*/

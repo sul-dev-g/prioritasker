@@ -372,6 +372,47 @@
     </section>
 
   </main>
+
+  <!-- Registration/Login Form -->
+  <form id="signup-form" action="/users.html" method="post">
+    <ul class="form-fields">
+      <!-- Username field -->
+      <li class="username-field">
+        <label for="username">Create username &nbsp;&nbsp;&nbsp; <span class="required-tag" aria-label="required">*Required</span></label>
+        <input id="username" type="text" placeholder="Create a username" name="user-name">
+      </li>
+
+      <!-- Email field -->
+      <li class="email-field">
+        <label for="email">Enter email &nbsp;&nbsp;&nbsp;<span class="optional-tag" aria-label="optional">*Optional</span></label>
+        <input id="email" type="text" placeholder="Enter your email" name="user-email">  
+      </li>
+
+      <!-- Password field -->
+      <li class="password-field">
+        <label for="password">Create password &nbsp;&nbsp;&nbsp;<span class="required-tag" aria-label="required">*Required</span></label>
+        <input id="password" type="text" placeholder="Create a password" name="user-password">
+      </li>
+      
+      <!-- Re-enter password field -->
+      <li class="re-enter-password">
+        <label for="re-enter-password">Re-enter password &nbsp;&nbsp;&nbsp;<span class="required-tag" aria-label="required">*Required</span></label>
+        <input id="password" type="text" placeholder="Re-enter password" name="user-re-enter-password">
+      </li>
+      
+      <!-- Sign up button -->
+      <li class="signup">
+        <button id="signup-btn" type="submit" name="signup-button">Sign Up</button>
+      </li>
+    </ul>
+    
+    <!-- Alternative signup -->
+    <p>Or signup with:</p>
+    <button type="button">Google</button>
+    <button type="button">IG</button>
+    <button type="button">TW</button>
+    <button type="button">Continue as guest</button>
+  </form>
     
     <!-- Footer -->
     <footer id="footer" class="section-padding">
