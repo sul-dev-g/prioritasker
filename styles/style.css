@@ -212,6 +212,7 @@ a {
   background-color: var(--green-tint-2);
   padding: 2em;
   border-radius: 25px;
+  margin-bottom: 2em;
 }
 .feature-title {
   font-size: 1.7rem;
