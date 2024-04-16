@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/style.css" />
     <link rel="stylesheet" href="../styles/app.css" />
+    <script src="../../scripts/app.js" defer></script>
     <title>Prioritasker | Task confirmation</title>
   </head>
   <body>
     <!------------------ Show task confirmation message -------->
-    <section id="confirmation-screen" class="hidden">
+    <section id="confirmation-screen">
       <!-- Display a confirmation message to state that users task has been added -->
       <article class="task-confirmation">
         <div class="container">
           <!-- Display a tick icon -->
-          <img src="../img/img-tick.svg" alt="tick icon" />
+          <img src="/assets/img/img-tick.svg" alt="tick icon" />
 
           <!-- State the confirmation message -->
           <p class="task-confirmation-msg">
@@ -25,7 +26,7 @@
           <button class="add-another-task-btn btn">Add another task...</button>
 
           <!-- Add a link for the user to review their current tasks -->
-          <a class="review-tasks-btn"
+          <a href="/app/screens/review-tasks.html" class="review-tasks-btn"
             >Review your tasks <i class="fas fa-chevron-right"></i
           ></a>
         </div>
