@@ -78,6 +78,10 @@ const submitTask = function (e) {
 
   taskRecordObject.contents = `${task}`;
   taskRecordObject.isComplete = false;
+
+  // Go to next screen
+  window.location.href =
+    "https://sul-devs.github.io/prioritasker/app/screens/answer-quiz.html";
 };
 
 submitTaskForm.addEventListener("submit", submitTask);

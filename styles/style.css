@@ -261,10 +261,6 @@ a {
   color: var(--green-tint-1);
 }
 
-/* Round the corners of the screenshot in each card */
-.how-it-works-screenshot {
-}
-
 /*--------------------------Plans-----------------------*/
 /* Make plans wrapper responsive */
 .plans-wrapper {
