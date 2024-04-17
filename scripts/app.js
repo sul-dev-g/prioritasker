@@ -130,11 +130,14 @@ const submitQuiz = function () {
 
     // Report when transaction is complete
     transaction.addEventListener("complete", () => {
-      console.log("Transaction completed: database modification finished.");
+      console.log("Transaction is complete: database modification finished.");
     });
   };
   addtaskRecordObjectToDatabase();
   updateDisplayOfTasks();
+
+  window.location.href =
+    "https://sul-devs.github.io/prioritasker/app/screens/review-tasks.html";
 };
 submitQuizForm.addEventListener("submit", submitQuiz);
 
