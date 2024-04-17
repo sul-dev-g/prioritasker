@@ -135,7 +135,6 @@ a {
   position: sticky;
   top: 0;
   background-color: var(--dominant-blue);
-  opacity: 95%;
 }
 
 /* Layout and align the navbar */
@@ -390,62 +389,6 @@ a {
   color: var(--green-tint-3);
 }
 
-/* --------------------- Form Styling -------------------- */
-#signup-form {
-  display: inline-block;
-  padding: 2em;
-  border-radius: 1.5em;
-  background-color: #499d80;
-}
-
-.form-fields li {
-  margin-bottom: 1em;
-}
-
-.form-fields label {
-  display: block;
-  margin-bottom: 0.7em;
-  color: #fff;
-  text-transform: capitalize;
-}
-
-.form-fields input {
-  font: 400 0.9em/1.6 "Figtree", sans-serif;
-  padding: 0.8em;
-  padding-inline: 1em;
-  border: none;
-  border-radius: 1.5em;
-  width: 100%;
-}
-
-.form-fields input:focus {
-  outline: none;
-}
-
-.required-tag {
-  font-size: 0.7em;
-  color: #761301;
-}
-
-.optional-tag {
-  font-size: 0.7em;
-  color: #335491;
-}
-
-#signup-form button {
-  border: none;
-  padding: 1em;
-  border-radius: 1.5em;
-  font: 400 0.7em/1.6 "Figtree", sans-serif;
-}
-
-#signup-btn {
-  width: 100%;
-  font-size: 0.8em !important;
-  background-color: darkslategray;
-  color: #fff;
-}
-
 /*--------------------------Footer------------------------*/
 /* Style the newsletter optin */
 .newsletter {
@@ -472,7 +415,10 @@ a {
   border: none;
   padding-block: 1.4em;
   font-size: 0.8em;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 /* Style the email input field */
@@ -480,10 +426,10 @@ a {
   margin-top: 1em;
   border: none;
   width: 40%;
-  padding-inline: 1em;
-  padding-block: 1em;
+  padding: 1em;
   font-size: 1em;
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   font-family: "Figtree", sans-serif;
 }
 

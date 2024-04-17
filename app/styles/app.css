@@ -278,19 +278,19 @@ h2 {
   font-size: 0.8em;
 }
 .task-directions.do-now {
-  background-color: rgb(233, 194, 86);
+  background-color: rgb(5, 209, 5);
   color: #fff;
 }
 .task-directions.schedule {
-  background-color: rgb(130, 86, 233);
+  background-color: rgb(1, 47, 199);
   color: #fff;
 }
 .task-directions.delegate {
-  background-color: rgb(199, 45, 45);
+  background-color: rgb(130, 86, 233);
   color: #fff;
 }
 .task-directions.delete {
-  background-color: rgb(1, 47, 199);
+  background-color: rgb(199, 45, 45);
   color: #fff;
 }
 

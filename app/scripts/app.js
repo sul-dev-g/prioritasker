@@ -135,9 +135,6 @@ const submitQuiz = function () {
   };
   addtaskRecordObjectToDatabase();
   updateDisplayOfTasks();
-
-  window.location.href =
-    "https://sul-devs.github.io/prioritasker/app/screens/review-tasks.html";
 };
 submitQuizForm.addEventListener("submit", submitQuiz);
 
