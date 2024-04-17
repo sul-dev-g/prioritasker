@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/form.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Sign Up to Prioritasker!</h1>
+    <!-- Registration/Login Form -->
+    <form id="signup-form" action="/users.html" method="post">
+      <ul class="form-fields">
+        <!-- Username field -->
+        <li class="form-field username-field">
+          <label for="username"
+            >Create username &nbsp;&nbsp;&nbsp;
+            <span class="required-tag" aria-label="required"
+              >*Required</span
+            ></label
+          >
+          <input
+            id="username"
+            type="text"
+            placeholder="e.g. Bob Builder"
+            name="user-name"
+          />
+        </li>
+
+        <!-- Email field -->
+        <li class="form-field email-field">
+          <label for="email"
+            >Enter email &nbsp;&nbsp;&nbsp;<span
+              class="optional-tag"
+              aria-label="optional"
+              >*Optional</span
+            ></label
+          >
+          <input
+            id="email"
+            type="text"
+            placeholder="e.g. bob@example.com"
+            name="user-email"
+          />
+        </li>
+
+        <!-- Password field -->
+        <li class="form-field password-field">
+          <label for="password"
+            >Create password &nbsp;&nbsp;&nbsp;<span
+              class="required-tag"
+              aria-label="required"
+              >*Required</span
+            ></label
+          >
+          <input
+            id="password"
+            type="text"
+            placeholder="Create a password"
+            name="user-password"
+          />
+        </li>
+
+        <!-- Re-enter password field -->
+        <li class="form-field re-enter-password">
+          <label for="re-enter-password"
+            >Re-enter password &nbsp;&nbsp;&nbsp;<span
+              class="required-tag"
+              aria-label="required"
+              >*Required</span
+            ></label
+          >
+          <input
+            id="password"
+            type="text"
+            placeholder="Re-enter password"
+            name="user-re-enter-password"
+          />
+        </li>
+
+        <!-- Sign up button -->
+        <li class="signup">
+          <button
+            id="signup-btn"
+            class="btn"
+            type="submit"
+            name="signup-button"
+          >
+            Sign Up
+          </button>
+        </li>
+      </ul>
+
+      <!-- Alternative signup -->
+      <p class="or">Or</p>
+      <br />
+      <!-- <button type="button">Google</button>
+      <button type="button">IG</button>
+      <button type="button">TW</button> -->
+      <a href="/app/screens/add-a-task.html" class="btn continue-as-guest-btn"
+        >Continue as guest</a
+      >
+    </form>
+  </body>
+</html>
