@@ -218,7 +218,7 @@ a {
   margin: 1rem 0;
 }
 .feature-description {
-  color: var(--green-tint-3);
+  color: rgb(255, 255, 255);
 }
 .feature-icon {
   background-color: var(--accent-red);
@@ -257,7 +257,7 @@ a {
 /* Add spacing between the directions and the image in each card*/
 .how-it-works-directions {
   margin-bottom: 1em;
-  color: var(--green-tint-1);
+  color: var(--secondary-green);
 }
 
 /*--------------------------Plans-----------------------*/
