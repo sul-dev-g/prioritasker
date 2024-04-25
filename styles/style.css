@@ -78,7 +78,7 @@ a {
 
 .border {
   border-radius: 25px;
-  border: 1px solid var(--orange);
+  border: 2px solid var(--orange);
 }
 
 /* Base styles */
