@@ -11,26 +11,27 @@
   <body>
     <!------------------ Show task confirmation message -------->
     <section id="confirmation-screen">
-      <!-- Display a confirmation message to state that users task has been added -->
+      <h1>Click 'Review your tasks' link</h1>
+
       <article class="task-confirmation">
         <div class="container">
-          <!-- Display a tick icon -->
-          <img src="/assets/img/img-tick.svg" alt="tick icon" />
+          <img src="../../assets/img/img-tick.svg" alt="tick icon" />
 
-          <!-- State the confirmation message -->
           <p class="task-confirmation-msg">
             <em>Task has been added successfully.</em>
           </p>
 
-          <!-- Add a link for the user to add another task -->
-          <button class="add-another-task-btn btn">Add another task...</button>
-
-          <!-- Add a link for the user to review their current tasks -->
           <a
             href="/prioritasker/app/screens/review-tasks.html"
-            class="review-tasks-btn"
+            class="review-tasks-btn btn"
             >Review your tasks <i class="fas fa-chevron-right"></i
           ></a>
+
+          <a
+            href="/prioritasker/app/screens/add-a-task.html"
+            class="add-another-task-btn"
+            >Add another task...</a
+          >
         </div>
       </article>
     </section>
