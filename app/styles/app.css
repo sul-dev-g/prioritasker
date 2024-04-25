@@ -1,12 +1,20 @@
 /* ------------------------ ADD A TASK ----------------------- */
-/* Style link that goes back to home page */
+#add-task-screen label {
+  color: var(--orange-tint-1);
+}
+
+#add-task-screen .add-task-btn {
+  background-color: var(--orange);
+  color: var(--blue);
+  font-weight: bold;
+}
+
 .back-to-home {
   position: sticky;
   top: 0;
   padding: 1em 1.5em;
 }
 
-/* Position the form in the center of the screen */
 #submit-task-form {
   position: absolute;
   top: 50%;
@@ -15,35 +23,31 @@
   z-index: 1;
 }
 
-/* Display input and button adjacently */
-#add-task-form div {
+#submit-task-form div {
   display: flex;
 }
 
-/* Style label */
-#add-task-form label {
-  font-size: 1.1em;
+#submit-task-form label {
+  font-size: 1.2em;
 }
 
-/* Style the task input field */
 #input {
   border: none;
-  font-size: 1em;
+  font-size: 0.9em;
   padding-left: 1em;
   padding-block: 0.6em;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
+
 #input:focus {
   outline: none;
 }
 
-/* Style the add button and add a transition effect */
 .add-task-btn {
   cursor: pointer;
-  font-size: 1.1rem;
-  border: none;
-  background-color: #761301;
+  font-size: 0.9em;
+  border: 0;
   color: #fff;
   padding-block: 0.7em;
   padding-inline: 0.9em;
@@ -56,23 +60,21 @@
 }
 
 /* ------------------------ TASK QUIZ ------------------------ */
-/* Display users task at the top of the screen, limit it from getting too wide */
 #header .container {
   max-width: 800px;
 }
 
-/* Style the heading that tells the user their task is below */
 .your-task {
   font-size: 0.8em;
   text-align: center;
 }
 
-/* Style the task in the header */
 .quiz-title {
   font-size: 1.05em;
   text-wrap: wrap;
   padding: 1em;
-  border: 1px solid #fff;
+  border: 1px solid var(--orange);
+  color: #fff;
   margin-top: 0.2em;
   width: fit-content;
   text-align: center;
@@ -81,30 +83,25 @@
   margin-inline: auto;
 }
 
-/* Limit the questionairre form's width, and keep it centered */
 #submit-quiz-form {
   max-width: 500px;
   margin-inline: auto;
 }
 
-/* Style each field in the questionairre */
 #answer-task-questions fieldset {
-  border: none;
-  background: #499d80;
   border-radius: 20px;
 }
 
-/* Style the question */
 legend {
   text-align: center;
-  background-color: #00764d;
-  color: #fff;
+  background-color: var(--orange);
+  color: var(--blue);
   padding: 1rem;
-  font-size: 0.9em;
+  font-size: 1em;
   border-radius: 20px;
+  font-weight: bold;
 }
 
-/* Style the submit button */
 .quiz-submit-btn {
   width: 100%;
   padding: 0.7rem;
@@ -114,29 +111,34 @@ legend {
   text-align: center;
 }
 
-/* Style options in questionairre */
 .options-container {
   display: flex;
   justify-content: space-around;
 }
+
 .option {
   padding: 3em 0;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .option label {
   padding-top: 1em;
   color: #fff;
 }
+
 input[type="radio"] {
   height: 2rem;
   width: 2rem;
   border: none;
 }
 
+input[type="radio"]:focus {
+  outline: none;
+}
+
 /* --------------------- SHOW TASK CONFIRMATION MESSAGE ---------------------- */
-/* Make confirmation message to take up full viewport */
 .task-confirmation {
   position: absolute;
   top: 0;
@@ -146,7 +148,6 @@ input[type="radio"] {
   width: 100%;
 }
 
-/* Center the contents of the confirmation message */
 .task-confirmation .container {
   display: flex;
   flex-direction: column;
@@ -157,53 +158,61 @@ input[type="radio"] {
   padding-top: 20vh;
 }
 
-/* Make image responsive */
 .task-confirmation img {
   width: 35%;
   max-width: 200px;
 }
 
-/* Add spacing between elements */
 .task-confirmation .container > *:not(:last-child) {
   margin-bottom: 0.8rem;
 }
+
 .all-tasks {
   margin-top: 2em;
 }
+
 .task-confirmation-msg {
   margin-top: 0.5em;
   font-size: 1.3em;
 }
+
 .add-another-task {
   margin-top: 2em;
   color: #fff;
+  background-color: var(--orange-tint);
 }
+
 .task-confirmation a {
   color: #fff;
 }
 
 /* ----------------------- REVIEW TASK LIST --------------------- */
-/* Filter task buttons */
+#task-list-screen .sort-tasks {
+  color: var(--orange);
+  text-shadow: 5px 5px 70px #000;
+  font-size: 1.5em;
+}
+
 .filter {
   display: flex;
   gap: 1.5em;
   flex-wrap: wrap;
 }
+
 .filter > * {
-  background-color: #bddcd1;
   font-weight: bold;
 }
-#do-now {
-  background-color: #00764d;
-}
+
 .filter-task-list-btns {
-  flex: 1;
+  flex: 1 75px;
   padding: 2em;
   font-size: 1.2em;
   border-radius: 20px;
+  text-shadow: 5px 5px 80px #000;
+  color: #fff;
+  background-color: var(--orange-tint-1);
 }
 
-/* Task list */
 #task-list {
   display: flex;
   flex-wrap: wrap;
@@ -219,83 +228,83 @@ input[type="radio"] {
   text-align: center;
 }
 
-/* Increase font size of 'Your tasks()' heading */
 #tasks h1 {
   font-size: 2.5em;
   margin-block: 1em 0.8em;
 }
 
-/* Style the screen where list of tasks are displayed */
 .task-card {
-  background-color: #335491;
   padding: 1.5em 1.9em;
   border-radius: 15px;
+  border: 1px solid var(--orange);
   margin-bottom: 1em;
   position: relative;
+  color: #fff;
 }
 
-/* Increase size of task text and add spacing below */
 .task-card .task-text {
   font-size: 1.2em;
   margin-bottom: 0.5em;
-  color: #e6eaf1;
   padding-top: 0.5em;
 }
 
-/* Style task buttons */
 .edit-task-btn,
 .complete-task-btn,
 .delete-task-btn {
   border: none;
-  color: #e4d0cc;
-  background: #842b1a;
   font-family: "Outfit", sans-serif;
   font-size: 0.8em;
   margin-right: 1em;
   margin-top: 1.5em;
   border-radius: 10px;
+  text-shadow: 5px 5px 40px #000;
+  background-color: var(--orange);
+  color: var(--blue);
 }
 
-/* Add space between headings and tasks */
 h2 {
   margin-bottom: 1em;
 }
 
-/* Add spacing above the completed tasks section */
 #completed-tasks {
   margin-top: 3em;
 }
 
-/* Position task directions top right */
 .task-directions {
   position: absolute;
   top: 0;
   right: 0;
   color: #fff;
-  padding: 0.5em;
+  padding: 0.6em 1em;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  z-index: -1;
 }
+
 .task-directions.do-now {
   background-color: rgb(5, 209, 5);
   color: #fff;
 }
+
 .task-directions.schedule {
   background-color: rgb(1, 47, 199);
   color: #fff;
 }
+
 .task-directions.delegate {
   background-color: rgb(130, 86, 233);
   color: #fff;
 }
+
 .task-directions.delete {
   background-color: rgb(199, 45, 45);
   color: #fff;
 }
 
-@media only screen and (max-width: 892px) and (min-width: 615px) {
-  #do-now {
-    order: 3;
-  }
+#navbar {
+  background-color: var(--blue-shade);
 }

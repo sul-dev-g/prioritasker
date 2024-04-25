@@ -3,24 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/db095d3dfc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Prioritasker | Home</title>
   </head>
   <body id="body">
-    <!-- Add a skip to main content link for screen readers and keyboard users -->
     <a href="#main" class="skip-to-main-content">Skip to main content</a>
 
-    <!-- Display navbar -->
+    <!-- Navbar -->
     <nav id="navbar">
       <div class="container">
-        <!-- Display logo -->
+        <!-- logo -->
         <a id="logo" href="index.html#body" title="Prioritasker logo - back to homepage">
-          <img src="assets/img/img-logo.svg" alt="Prioritasker logo" />
+          <img src="assets/img/img-logo.svg" loading="lazy" alt="Prioritasker logo" class="logo"/>
         </a>
 
-        <!-- Display nav links -->
-        <ul id="nav-links" class="hidden">
+        <!-- nav links -->
+        <ul class="nav-links" class="hidden">
           <li class="nav-link"><a href="#features">Benefits</a></li>
           <li class="nav-link"><a href="#how-it-works">How it works</a></li>
           <li class="nav-link"><a href="#plans">Plans</a></li>
@@ -28,88 +27,67 @@
           <li class="nav-link"><a href="#faqs">FAQs</a></li>
         </ul>
 
-        <!-- Display free demo cta -->
-        <a href="https://sul-devs.github.io/prioritasker/pages/form.html" class="cta btn">Free Demo</a>
+        <!-- cta -->
+        <a href="/prioritasker/pages/form.html" class="cta btn">Free Demo</a>
       </div>
     </nav>
 
-    <!-- Show hero content -->
+    <!-- Hero -->
     <header id="hero" class="section-padding">
       <div class="container">
-        <!-- Add hero text -->
+        <!-- hero text -->
         <hgroup class="hero-content">
           <h1 class="hero-heading">Prioritise the tasks of your business.</h1>
           <p class="hero-text">Have a huge workload? Not meeting deadlines? Complete more work by prioritising the tasks with greatest ROI for your business.</p>
-          <!-- Add ctas -->
-            <a href="https://sul-devs.github.io/prioritasker/pages/form.html" class="get-started-btn btn">Try Prioritasker free</a>
-            <a href="#how-it-works" class="btn btn-outline how-it-works-btn">How it works</a>
-            <br><br>
-            <span class="no-signup-req">No signup required!</span>
+          <a class="get-started-btn btn" href="/prioritasker/pages/form.html">Try Prioritasker free</a>
+          <a href="#how-it-works" class="btn btn-outline how-it-works-btn">How it works</a>
+          <br><br>
+          <span class="no-signup-req">No signup required!</span>
         </hgroup>
-        <!-- Display hero image -->
-        <img class="hero-img" src="assets/img/img-hero.svg" alt="">
+        <!-- hero image -->
+        <img class="hero-img" src="assets/img/hero-img.svg" loading="lazy" alt="">
       </div>
     </header>
 
     <main id="main">
 
-      <!-- Create features section -->
+      <!-- Features -->
       <section id="features" class="section-padding">
         <div class="container">
-          <!-- Add a features section heading -->
           <h2 class="section-heading">What's in it for you?</h2>
-
-          <!-- Create a container that contains all the feature cards -->
           <ul class="feature-cards-wrapper">
-
-            <!-- Create wrapper for feature card -->
-            <li class="feature-card-wrapper">
-              <!-- Create the feature card -->
+            <!-- Feature -->
+            <li class="feature-card-wrapper border">
               <article class="feature-card">
-                <!-- Add feature icon -->
                 <i class="feature-icon fas fa-money-bill-trend-up"></i>
-                <!-- Add a title outlining the feature -->
                 <h3 class="feature-title">Grow your revenue</h3>
-                <!-- Add a short description of the feature -->
                 <p class="feature-description">By prioritising high ROI tasks you can increase sales.</p>
               </article>
             </li>
 
-            <!-- Create wrapper for feature card -->
-            <li class="feature-card-wrapper">
-              <!-- Create the feature card -->
+            <!-- Feature -->
+            <li class="feature-card-wrapper border">
               <article class="feature-card">
-                <!-- Add feature icon -->
                 <i class="feature-icon fas fa-bolt"></i>
-                <!-- Add a title outlining the feature -->
                 <h3 class="feature-title">Improve efficiency</h3>
-                <!-- Add a short description of the feature -->
                 <p class="feature-description">Get more important tasks done by prioritising your workload.</p>
               </article>
             </li>
 
-          <!-- Create wrapper for feature card -->
-          <li class="feature-card-wrapper">
-            <!-- Create the feature card -->
+          <!-- Feature -->
+          <li class="feature-card-wrapper border">
             <article class="feature-card">
-                <!-- Add feature icon -->
                 <i class="feature-icon fas fa-arrow-up-right-dots"></i>
-                <!-- Add a title outlining the feature -->
                 <h3 class="feature-title">Scale your business</h3>
-                <!-- Add a short description of the feature -->
                 <p class="feature-description">Get more results and opportunities to scale your business.</p>
             </article>
           </li>
 
-          <!-- Create wrapper for feature card -->
-          <li class="feature-card-wrapper">
-            <!-- Create the feature card -->
+          <!-- Feature -->
+          <li class="feature-card-wrapper border">
             <article class="feature-card">
-              <!-- Add feature icon -->
               <i class="feature-icon fas fa-ribbon"></i>
-              <!-- Add a title outlining the feature -->
               <h3 class="feature-title">Lead your market</h3>
-              <!-- Add a short description of the feature -->
               <p class="feature-description">Outperform the competition and lead your market.</p>
             </article>
           </li>
@@ -117,69 +95,54 @@
       </div>
     </section>
     
-    <!-- Create How it works section -->
+    <!-- How it works -->
     <section id="how-it-works" class="section-padding">
       <div class="container">
-        <!-- Create a header summarising the use cases of the application -->
         <header>
           <h2 class="section-heading">How it works</h2>
-          <p class="how-it-works-summary">Prioritasker tells you how to prioritise your workload distinguishing the highly important tasks from the less important ones. See how to use the application below.</p>
-        </header>
+          <p class="description">Prioritasker tells you how to prioritise your workload distinguishing the highly important tasks from the less important ones. See how to use the application below &nbsp; <i class="fas fa-arrow-down"></i></p>
+        </header>  
+          
+          <ul class="steps">
+            
+            <!-- Step 1 -->
+            <li class="step border">
+              <img src="/assets/img/img-demo-1.jpg" loading="lazy" alt="Demo of a task being added in Prioritasker">
+              <h3 class="how-it-works-directions">1. Enter a task.</h3>
+            </li>
+            
+            <!-- Step 2 -->
+            <li class="step border">
+              <img src="/assets/img/img-demo-22.png" loading="lazy" alt="Demo of the task questionairre screen in Prioritasker">
+              <h3 class="how-it-works-directions">2. Answer 2 questions.</h3>
+            </li>
 
-        <!-- Outline the user flow of the application -->
-        <ul class="steps">
-
-          <!-- Outline the first user story -->
-          <li class="step">
-            <!-- Explain the action user needs to take -->
-            <p class="how-it-works-directions">1. Enter a task.</p>
-            <!-- Add a screenshot illustrating the action the user needs to take -->
-            <img class="how-it-works-screenshot" src="assets/img/img-how-it-works-1.png" alt="screenshot of a task being added in Prioritasker">
-          </li>
+            <!-- Step 3 -->
+            <li class="step border">
+              <img src="/assets/img/img-demo-2.png" loading="lazy" alt="Demo of the task confirmation screen in Prioritasker">
+              <h3 class="how-it-works-directions">2. Review tasks or add another task.</h3>
+            </li>
           
-          <!-- Outline second user story -->
-          <li class="step">
-            <!-- Explain the action user needs to take -->
-            <p class="how-it-works-directions">2. Answer 2 questions.</p>
-            <!-- Add a screenshot illustrating the action the user needs to take -->
-            <img class="how-it-works-screenshot" src="assets/img/img-how-it-works-1.png" alt="screenshot of a questionairre being submitted in Prioritasker">
-          </li>
-          
-          <!-- Outline third user story -->
-          <li class="step">
-            <!-- Explain the action user needs to take -->
-            <p class="how-it-works-directions">3. Review your task list.</p>
-            <!-- Add a screenshot illustrating the action the user needs to take -->
-            <img class="how-it-works-screenshot" src="assets/img/img-how-it-works-1.png" alt="screenshot of the review tasks page in Prioritasker">
-          </li>
-          
-          <!-- Outline fourth user story -->
-          <li class="step">
-            <!-- Explain the action user needs to take -->
-            <p class="how-it-works-directions">4. Accomplish tasks.</p>
-            <!-- Add a screenshot illustrating the action the user needs to take -->
-            <img class="how-it-works-screenshot" src="assets/img/img-how-it-works-1.png" alt="screenshot of a task being added in Prioritasker">
+          <!-- Step 4 -->
+          <li class="step border">
+            <img src="/assets/img/img-demo-3.png" loading="lazy" alt="somebody accomplishing their tasks">
+            <h3 class="how-it-works-directions">4. Complete your tasks.</h3>
           </li>
         </ul>
       </div>
     </section>
     
-    <!-- Create the plans section -->
+    <!-- Plans -->
     <section id="plans" class="section-padding">
       <div class="container">
-        <!-- Add a section heading -->
         <h2 class="section-heading">Our Plans</h2>
 
-        <!-- Create a container that contains all the available plans -->
         <ul class="plans-wrapper">
 
-          <!-- Create a plan card wrapper -->
-          <li class="plan-card-wrapper">
-            <!-- Create plan card -->
+          <!-- Exclusive plan -->
+          <li class="plan-card-wrapper border">
             <article class="plan-card">
-              <!-- Write plan title -->
               <h3 class="plan-title">Exclusive plan</h3>
-              <!-- List plan benefits -->
               <ul class="plan-benefits">
                 <li class="plan-benefit">Unlimited users</li>
                 <li class="plan-benefit">Unlimited tasks</li>
@@ -187,18 +150,14 @@
                 <li class="plan-benefit">10GB storage space/user</li>
                 <li class="plan-benefit">24/7 support</li>
               </ul>
-              <!-- Create plan cta button -->
-              <a href="#" class="plan-cta-btn btn">Choose this plan</a>
+              <a href="#" class="plan-cta-btn btn">Choose exclusive plan</a>
             </article>
           </li>
 
-          <!-- Create a plan card wrapper -->
-          <li class="plan-card-wrapper">
-            <!-- Create a plan card -->
+          <!-- Premium plan -->
+          <li class="plan-card-wrapper border">
             <article class="plan-card">
-              <!-- Write plan title -->
               <h3 class="plan-title">Premium plan</h3>
-              <!-- List plan benefits -->
               <ul class="plan-benefits">
                 <li class="plan-benefit">Unlimited users</li>
                 <li class="plan-benefit">Unlimited tasks</li>
@@ -206,18 +165,14 @@
                 <li class="plan-benefit">10GB storage space/user</li>
                 <li class="plan-benefit">24/7 support</li>
               </ul>
-              <!-- Create plan cta button -->
-              <a href="#" class="plan-cta-btn btn">Choose this plan</a>
+              <a href="#" class="plan-cta-btn btn">Choose premium plan</a>
             </article>
           </li>
           
-          <!-- Create a plan card wrapper -->
-          <li class="plan-card-wrapper">
-            <!-- Create a plan card -->
+          <!-- Starter plan -->
+          <li class="plan-card-wrapper border">
             <article class="plan-card">
-              <!-- Write plan title -->
               <h3 class="plan-title">Starter plan</h3>
-              <!-- List plan benefits -->
               <ul class="plan-benefits">
                 <li class="plan-benefit">Unlimited users</li>
                 <li class="plan-benefit">Unlimited tasks</li>
@@ -225,75 +180,56 @@
                 <li class="plan-benefit">10GB storage space/user</li>
                 <li class="plan-benefit">24/7 support</li>
               </ul>
-              <!-- Create plan cta button -->
-              <a href="#" class="plan-cta-btn btn">Choose this plan</a>
+              <a href="#" class="plan-cta-btn btn">Choose starter plan</a>
             </article>
           </li>
-
         </ul>
       </div>
     </section>
 
-       <!-- Create Testimonials section -->
+       <!-- Testimonials -->
        <section id="testimonials" class="section-padding">
         <div class="container">
-          <!-- Add a section heading -->
           <h2 class="testimonials-heading section-heading">Testimonials</h2>
 
-          <!-- Create a container for all testimonials -->
           <ul class="testimonials">
 
-            <!-- Create a wrapper for each testimonial -->
-            <li class="testimonial-wrapper">
-              <!-- Create testimonial -->
+            <!-- testimonial -->
+            <li class="testimonial-wrapper border">
               <article class="testimonial">
-                <!-- Add a quote icon -->
                 <i class="testimonial-icon fas fa-quote-left"></i>
-                <!-- Add the testimonial words -->
                 <p class="testimonial-words">Would highly recommend</p>
               </article>
             </li>
             
-            <!-- Create a wrapper for each testimonial -->
-            <li class="testimonial-wrapper">
-              <!-- Create testimonial -->
+            <!-- testimonial -->
+            <li class="testimonial-wrapper border">
               <article class="testimonial">
-                <!-- Add a quote icon -->
                 <i class="testimonial-icon fas fa-quote-left"></i>
-                <!-- Add the testimonial words -->
                 <p class="testimonial-words">Great</p>
               </article>
             </li>
 
-            <!-- Create a wrapper for each testimonial -->
-            <li class="testimonial-wrapper">
-              <!-- Create testimonial -->
+            <!-- testimonial -->
+            <li class="testimonial-wrapper border">
               <article class="testimonial">
-                <!-- Add a quote icon -->
                 <i class="testimonial-icon fas fa-quote-left"></i>
-                <!-- Add the testimonial words -->
                 <p class="testimonial-words">Would highly recommend</p>
               </article>
             </li>
             
-            <!-- Create a wrapper for each testimonial -->
-            <li class="testimonial-wrapper">
-              <!-- Create testimonial -->
+            <!-- testimonial -->
+            <li class="testimonial-wrapper border">
               <article class="testimonial">
-                <!-- Add a quote icon -->
                 <i class="testimonial-icon fas fa-quote-left"></i>
-                <!-- Add the testimonial words -->
                 <p class="testimonial-words">Great</p>
               </article>
             </li>
             
-            <!-- Create a wrapper for each testimonial -->
-            <li class="testimonial-wrapper">
-              <!-- Create testimonial -->
+            <!-- testimonial -->
+            <li class="testimonial-wrapper border">
               <article class="testimonial">
-                <!-- Add a quote icon -->
                 <i class="testimonial-icon fas fa-quote-left"></i>
-                <!-- Add the testimonial words -->
                 <p class="testimonial-words">Great</p>
               </article>
             </li>
@@ -301,43 +237,41 @@
         </div>
       </section>
 
-    <!-- Create a cta section -->
+    <!-- Final CTA -->
     <section id="cta" class="section-padding">
       <div class="container">
-        <!-- Create an in-the-background image -->
         <img class="light-bulb" src="assets/img/img-bulb.svg">
-          <!-- Add section heading -->
           <h2 class="cta-heading">Get more work done</h2>
-          <!-- Add cta text to be displayed above bulb image -->
-        <p class="cta-description">Join Prioritasker today to strategically tackle your workload for greater efficiency</p>
-        <!-- Add cta button -->
-        <a href="https://sul-devs.github.io/prioritasker/pages/form.html" class="btn">Get Started Now!</a>
+        <p class="cta-description">Join Prioritasker today to strategically tackle your workload for greater efficiency.</p>
+        <a href="/prioritasker/pages/form.html" class="btn">Get Started Now!</a>
     </section>
     
-    <!-- Create faqs section -->
+    <!-- FAQs -->
     <section id="faqs" class="section-padding">
       <div class="container">
-        <!-- Add section heading -->
         <h2 class="section-heading">FAQs</h2>
 
-        <!-- Create faq field -->
-        <details class="faq-field">
-          <!-- Add the question -->
-          <summary class="faq-question">What is your pricing?</summary>
-          <!-- Add the answer -->
-          <ul>
-            <li><p>Exclusive Plan - £29.99/month</p></li>
-            <li><p>Premium Plan - £19.99/month</p></li>
-            <li><p>Starter Plan - Free for 14 days</p></li>
-          </ul>
-        </details>
-        
-        <!-- Create faq field -->
-        <details class="faq-field">
-          <!-- Add the question -->
+        <article class="faqs-wrapper border">
+          <!-- faq field -->
+          <details class="faq-field">
+            <!-- question -->
+            <summary class="faq-question">What is your pricing?</summary>
+            <!-- answer -->
+            <div class="faq-answer">
+              <ul>
+                <li><p>Exclusive Plan - £29.99/month</p></li>
+                <li><p>Premium Plan - £19.99/month</p></li>
+                <li><p>Starter Plan - Free for 14 days</p></li>
+              </ul>
+            </div>
+          </details>
+          
+          <!-- faq field -->
+          <details class="faq-field">
+          <!-- question -->
           <summary class="faq-question">How to use Prioritasker?</summary>
-          <!-- Add the answer -->
-          <article class="faq-answer">
+          <!-- answer -->
+          <div class="faq-answer">
             <ul>
               <li><p>1. Create an account</p></li>
               <li><p>2. Add tasks</p></li>
@@ -345,60 +279,53 @@
               <li><p>4. Review your tasks. Your tasks will be organised by priority i.e. Do Now (highest priority) all the way to Delete (lowest priority)</p></li>
               <li><p>5. Complete the tasks of highest priority first i.e. 'Do Now' tasks</p></li>
             </ul>
-          </article>
+          </div>
         </details>
         
-        <!-- Create faq field -->
+        <!-- faq field -->
         <details class="faq-field">
-          <!-- Add the question -->
+          <!-- question -->
           <summary class="faq-question">How long does the free trial last?</summary>
-          <!-- Add the answer -->
-          <article class="faq-answer">
+          <!-- answer -->
+          <div class="faq-answer">
             <p>14 days</p>
-          </article>
+          </div>
         </details>
         
-        <!-- Create faq field -->
+        <!-- faq field -->
         <details class="faq-field">
-          <!-- Add the question -->
+          <!-- question -->
           <summary class="faq-question">How can Prioritasker help my business?</summary>
-          <!-- Add the answer -->
-          <article class="faq-answer">
+          <!-- answer -->
+          <div class="faq-answer">
             <p>It can help you prioritise your workload so you can focus on achieving the tasks with greatest ROI for your business first. As opposed to working on low importance tasks which can be delegated or even deleted all together.</p>
-          </article>
+          </div>
         </details>
-
+      </article>
       </div>
     </section>
 
   </main>
     
+  <!-- newsletter opt-in -->
+  <article id="newsletter" class="section-padding">
+    <div class="container">
+      <h2 class="newsletter-heading">Increase sales</h2>
+      <p class="newsletter-description">Get a free guide on how to increase sales for your business using 7 work management techniques.</p>
+      <form class="optin">
+        <input class="email-input" type="email" name="email" placeholder="Enter your email" id="email">
+        <input class="get-the-guide-btn btn" type="submit" value="Get the guide">
+      </form>
+    </div>
+  </article>
+
     <!-- Footer -->
     <footer id="footer" class="section-padding">
-
-      <!-- Create opt-in for newsletter at the top of the footer -->
-      <article class="newsletter section-padding">
-        <div class="container">
-          <!-- Create optin text -->
-          <h4 class="newsletter-heading">Increase sales</h4>
-          <p class="newsletter-description">Get a free guide on how to increase sales for your business using 7 work management techniques.</p>
-          <!-- Create an email form cta -->
-          <form class="optin">
-            <input class="email-input" type="email" name="email" placeholder="Enter your email" id="email">
-            <input class="get-the-guide-btn btn" type="submit" value="Get the guide">
-          </form>
-        </div>
-      </div>
-    </article>
-
-      <!-- Create footer links -->
+      <!-- footer group -->
       <section class="footer-link-groups section-padding">
         <div class="container">
-          <!-- Create a group for 'Prioritaker' group of links -->
           <article class="prioritasker-links-group">
-            <!-- Add a title for this group of links -->
             <h4 class="group-of-links-title">Prioritasker</h4>
-            <!-- Add links for 'Prioritasker' group -->
             <ul class="group-of-links">
               <li class="footer-link"><a href="#">Pricing</a></li>
               <li class="footer-link"><a href="#">Reviews</a></li>
@@ -408,11 +335,9 @@
             </ul>
           </article>
 
-          <!-- Create a group for 'Resources' group of links -->
+          <!-- footer group -->
           <article class="resources-links-group">
-            <!-- Add a title for this group of links -->
             <h4 class="group-of-links-title">Resources</h4>
-            <!-- Add links for 'Prioritasker' group of links -->
             <ul class="group-of-links">
               <li class="footer-link"><a href="#">Help Center</a></li>
               <li class="footer-link"><a href="#">Developers</a></li>
@@ -420,11 +345,9 @@
             </ul>
           </article>
 
-          <!-- Create a group for 'Legal' group of links -->
+          <!-- footer group -->
           <article class="legal-links-group">
-            <!-- Add a title for this group of links -->
             <h4 class="group-of-links-title">Legal</h4>
-            <!-- Add links for 'Prioritasker' group of links -->
             <ul class="group-of-links">
               <li class="footer-link"><a href="#">Privacy</a></li>
               <li class="footer-link"><a href="#">Cookies</a></li>
@@ -435,7 +358,7 @@
         </div>
       </section>
       
-      <!-- Add a section for links to socials -->
+      <!-- socials -->
       <div class="socials">
         <div class="container">
           <a href="#"><i class="fab fa-youtube"></i></a>
@@ -445,10 +368,9 @@
         </div>
       </div>
 
-      <!-- Add copyright message -->
+      <!-- copyright message -->
       <p class="copyright container">
           &copy; 2024 Prioritasker, All rights reserved.</p>
-      </div>
     </footer>
   </body>
 </html>

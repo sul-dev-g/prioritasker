@@ -1,52 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/style.css" />
     <link rel="stylesheet" href="../styles/app.css" />
     <script src="../scripts/app.js" defer></script>
     <title>Prioritasker | Review task list</title>
-</head>
-<body>
-  <a href="/prioritasker/app/screens/add-a-task.html">add another task</a>
+  </head>
+  <body>
     <!---------------------- Review task list ---------------->
-    <section id="task-list-screen">
+    <!-- <section id="task-list-screen">
         <header>
           <div class="container">
-            <p class="sort-tasks">Sort tasks</p>
-            <!-- Create a container for all task filtering buttons -->
-            <div class="filter">
-              <!-- Create do now filter button -->
-              <button id="do-now" class="filter-task-list-btns btn">
+            <p class="sort-tasks">What should you do do with your tasks?</p> -->
+    <!-- Create a container for all task filtering buttons -->
+    <!-- <div class="filter"> -->
+    <!-- Create do now filter button -->
+    <!-- <button id="do-now" class="filter-task-list-btns btn">
                 TO DO NOW
-              </button>
+              </button> -->
 
-              <!-- Create schedule filter button -->
-              <button id="schedule" class="filter-task-list-btns btn">
+    <!-- Create schedule filter button -->
+    <!-- <button id="schedule" class="filter-task-list-btns btn">
                 TO SCHEDULE
-              </button>
+              </button> -->
 
-              <!-- Create delegate filter button -->
-              <button id="delegate" class="filter-task-list-btns btn">
+    <!-- Create delegate filter button -->
+    <!-- <button id="delegate" class="filter-task-list-btns btn">
                 TO DELEGATE
-              </button>
+              </button> -->
 
-              <!-- Create delete filter button -->
-              <button id="delete" class="filter-task-list-btns btn">
+    <!-- Create delete filter button -->
+    <!-- <button id="delete" class="filter-task-list-btns btn">
                 TO DELETE
               </button>
             </div>
           </div>
-        </header>
+        </header> -->
 
-        <!-- List the tasks that need to be Done Now -->
-        <section id="tasks">
-          <div class="container">
-            <h1>Your Tasks (<span class="total-tasks"></span>)</h1>
-            <!-- Task list -->
-            <ul id="task-list"></ul>
-          </div>
-        </section>
-</body>
+    <!-- Display navbar -->
+    <nav id="navbar">
+      <div class="container">
+        <!-- Display logo -->
+        <a
+          id="logo"
+          href="../../index.html"
+          title="Prioritasker logo - back to homepage"
+        >
+          <img
+            src="../../assets/img/img-logo.svg"
+            alt="Prioritasker logo"
+            class="logo"
+          />
+        </a>
+
+        <!-- Display nav links -->
+        <ul class="nav-links" class="hidden">
+          <li class="nav-link">
+            <a href="../../index.html#features">Benefits</a>
+          </li>
+          <li class="nav-link">
+            <a href="../../index.html#how-it-works">How it works</a>
+          </li>
+          <li class="nav-link"><a href="../../index.html#plans">Plans</a></li>
+          <li class="nav-link">
+            <a href="../../index.html#testimonials">Reviews</a>
+          </li>
+          <li class="nav-link"><a href="../../index.html#faqs">FAQs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <a href="/prioritasker/app/screens/add-a-task.html">add another task</a>
+
+    <!-- List the tasks that need to be Done Now -->
+    <section id="tasks">
+      <div class="container">
+        <h1>Your Tasks (<span class="total-tasks"></span>)</h1>
+        <!-- Task list -->
+        <ul id="task-list"></ul>
+      </div>
+    </section>
+  </body>
 </html>

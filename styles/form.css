@@ -1,5 +1,4 @@
 body {
-  background-color: #e3fbf0;
   display: flex;
   flex-direction: column;
   gap: 3em;
@@ -11,9 +10,11 @@ body {
 /* --------------------- Form Styling -------------------- */
 #signup-form {
   display: inline-block;
+  height: fit-content;
+  max-height: 80%;
   padding: 2em;
   border-radius: 1.5em;
-  background-color: #499d80;
+  background-color: #004199;
 }
 
 .form-fields li {
@@ -42,12 +43,12 @@ body {
 
 .required-tag {
   font-size: 0.7em;
-  color: #ffc5ba;
+  color: rgb(255, 146, 146);
 }
 
 .optional-tag {
   font-size: 0.7em;
-  color: #c0ddf0;
+  color: rgb(185, 207, 253);
 }
 
 #signup-form button {
@@ -55,13 +56,10 @@ body {
   padding: 1em;
   border-radius: 1.5em;
   font: 400 0.7em/1.6 "Figtree", sans-serif;
-}
-
-#signup-btn {
   width: 100%;
   font-size: 0.8em !important;
-  background-color: darkslategray;
   color: #fff;
+  background-color: #fdba61;
 }
 
 .continue-as-guest-btn {
@@ -69,8 +67,6 @@ body {
   width: 100%;
   text-align: center;
   padding-block: 0.6em;
-  background-color: #bddcd1;
-  color: #00462d;
 }
 
 #signup-form {

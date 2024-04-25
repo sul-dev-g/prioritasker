@@ -1,415 +1,408 @@
-/* Import fonts link */
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&family=Outfit&display=swap");
 
+/* Variables */
 :root {
-  /* Create variables to access your colours in colour palette */
-  --dominant-blue: #002976;
-  --secondary-green: #00764d;
-  --accent-red: #761301;
-  --green-tint-1: #499d80;
-  --green-tint-2: #bddcd1;
-  --green-tint-3: #e3fbf0;
-  --blue-tint-1: #a4cce6;
-  --blue-tint-2: #335491;
-  --red-tint-1: #ffe0da;
-
-  /* Create font sizes variables for consistency */
+  --blue: #002174;
+  --orange: #ff5733;
+  --orange-tint: #ffdeb3;
+  --orange-tint-1: #ff5733;
+  --blue-btn-text: #063c93;
+  --blue-tint: #338aff;
+  --blue-shade: #004199;
   --fs-lg: 2.5rem;
   --fs-md: 1.2rem;
 }
 
-/*----------------------------Resets------------------------- */
-/* Remove default browser styling */
+/* Resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Remove bullet points from lists */
 ul,
 li {
   list-style: none;
 }
 
-/* Remove underline from links */
 a {
   text-decoration: none;
 }
-/* button {} */
+
 .white {
   background-color: #fff;
 }
 
-/*--------------------------Base styles--------------------*/
-/* Add smooth scrolling to site */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Set the base colors and font */
-body {
-  background: var(--dominant-blue);
-  color: var(--secondary-green);
-  font-family: "Outfit", sans-serif;
-  font-size: var(--fs-md);
-}
-
-/* Add typography styles */
-h1,
-h2 {
-  font-family: "Figtree", sans-serif;
-  color: var(--green-tint-1);
-}
-h2 {
-  color: var(--green-tint-3);
-  font-size: 1.5rem;
-}
-p {
-  color: var(--green-tint-2);
-}
-
-/* Make images responsive */
-img {
-  max-width: 100%;
-}
-
-/* Style links */
-a {
-  color: #fff;
-  font-family: "Outfit", sans-serif;
-  cursor: pointer;
-}
-
-/*--------------------------Utilities---------------------*/
-/* Create a container to restrict content/center it */
+/* Utilities */
 .container {
   max-width: 1200px;
   margin-inline: auto;
   padding: 0.75rem 1.25rem;
 }
 
-/* Create a primary button's styles */
 .btn {
   display: inline-block;
-  padding: 0.7rem;
-  background-color: var(--accent-red);
+  padding: 0.8em 1.2em;
+  background-color: var(--orange-tint-1);
+  color: var(--blue);
   cursor: pointer;
   transition: transform 100ms ease-in;
   border-radius: 4px;
-  border: none;
+  font-weight: bold;
+}
+
+.btn.btn-outline {
+  background: none;
+  font-weight: 400;
+  border: 1px solid #fff;
   color: #fff;
 }
 
-/* Add a transition effect to the button */
 .btn:hover {
   transform: scale(1.1);
 }
 
-/* Create a secondary button's styles */
-.btn.btn-outline {
-  border: 2px solid var(--accent-red);
-  background: none;
-  color: var(--accent-red);
-}
-
-/* Hide an element in the DOM */
 .hidden {
   display: none;
 }
 
-/* Add space beneath each section heading */
 .section-heading {
   padding-bottom: 1.5em;
   font-size: 2em;
 }
 
-/* Add vertical spacing in each section */
 .section-padding {
   padding-block: 3em;
 }
 
-/* --------------------------Navbar------------------------- */
-/* Make navbar stay at top of screen while scrolling */
-#navbar {
-  position: sticky;
-  top: 0;
-  background-color: var(--dominant-blue);
+.border {
+  border-radius: 25px;
+  border: 1px solid var(--orange);
 }
 
-/* Layout and align the navbar */
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--blue);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1em;
+  color: #fff;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Figtree", sans-serif;
+  color: var(--orange);
+}
+
+h3,
+h4 {
+  color: var(--orange-tint-1);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+}
+
+details {
+  border-bottom: 1px solid var(--orange);
+}
+
+summary {
+  cursor: pointer;
+}
+
+summary:hover {
+  opacity: 0.9;
+}
+
+details:focus,
+summary:focus {
+  outline: none;
+}
+
+/* --------------------- Navbar ---------------------- */
 #navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Set logo size */
-#navbar #logo img {
-  width: 140px;
+#navbar .logo {
+  width: 180px;
 }
 
-/* Add transition effect on navbar links */
-#nav-links li {
+#navbar .nav-links {
+  display: none;
+}
+
+#navbar li {
   transition: transform 100ms ease-out;
-}
-#navbar #nav-links li:hover {
-  transform: translateY(-0.2rem);
-}
-
-/* Add spacing between each link */
-.nav-link {
   padding-inline: 1em;
 }
 
-/*--------------------------Hero----------------------*/
-/* Create a responsive 2 column hero layout */
+#navbar li:hover {
+  transform: translateY(-0.2rem);
+}
+
+/*----------------------- Hero ----------------------*/
 #hero .container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
 }
+
 #hero .container > * {
   flex: 1;
 }
 
-/* Set font size of hero heading */
-.hero-heading {
+#hero .hero-heading {
   font-size: 2.5em;
+  text-shadow: 5px 5px 190px var(--orange);
 }
 
-/* Set the font size of hero text */
 #hero hgroup p {
   font-size: 1.2em;
   padding-block: 1.3em;
 }
 
-/* Add a border to cta button */
-.get-started-btn {
-  border: 2px solid var(--accent-red);
+#hero .get-started-btn {
+  border: 3px solid var(--accent-red);
   margin-right: 1em;
+  margin-bottom: 1em;
 }
 
-/* Change cta text color to white */
-#hero .how-it-works-btn {
-  color: var(--red-tint-1);
-  border: 2px solid var(--red-tint-1);
-  margin-top: 0.5em;
+#hero .no-signup-req {
+  margin-top: 0;
+  font-size: 0.92em;
+  color: #fff;
 }
 
-/*--------------------------Features--------------------- */
-/* Create responsive grid layout */
+/*------------------- Features ----------------- */
 .feature-cards-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
   grid-gap: 1em;
 }
 
-/* Style each feature cards */
 #features .feature-card-wrapper {
-  background-color: var(--green-tint-2);
   padding: 2em;
-  border-radius: 25px;
   margin-bottom: 2em;
 }
+
 .feature-title {
-  font-size: 1.7rem;
+  font-size: 1.5em;
   margin: 1rem 0;
 }
-.feature-description {
-  color: rgb(255, 255, 255);
-}
+
 .feature-icon {
-  background-color: var(--accent-red);
-  color: var(--green-tint-2);
   padding: 0.75rem;
   border-radius: 50%;
+  font-size: 1.1em;
+  color: var(--orange);
 }
 
-/*------------------------How it works---------------------*/
-/* Add spacing and change bg colour to lighter blue */
-#how-it-works {
-  background-color: var(--green-tint-1);
+.feature-description {
+  font-size: 1em;
+  font-weight: 300;
 }
 
-/* Add spacing to the summary text of how the application works */
-.how-it-works-summary {
+/*--------------- How it works ---------------*/
+#how-it-works .section-heading {
+  padding-bottom: 1em;
+}
+
+#how-it-works .description {
   font-size: 1.2em;
-  margin-bottom: 2.2em;
+  margin-bottom: 2em;
 }
 
-/* Layout cards to be responsive */
+#how-it-works i {
+  color: var(--orange);
+}
+
 #how-it-works .steps {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
   gap: 1em;
 }
+
 #how-it-works .step {
   margin-bottom: 1rem;
-  flex: 1 14em;
-  background-color: var(--green-tint-3);
   padding: 1.2em;
-  border-radius: 30px;
-  height: fit-content;
+  font-weight: 400;
 }
 
-/* Add spacing between the directions and the image in each card*/
-.how-it-works-directions {
+#how-it-works img {
+  border-radius: 10px;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#how-it-works h3 {
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 400;
+}
+
+#how-it-works img {
   margin-bottom: 1em;
-  color: var(--secondary-green);
 }
 
-/*--------------------------Plans-----------------------*/
-/* Make plans wrapper responsive */
-.plans-wrapper {
+/*---------------- Plans ----------------*/
+#plans .plans-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
 }
 
-/* Style each plan card */
-.plan-card-wrapper {
+#plans .plan-card-wrapper {
   background: var(--blue-tint-1);
   color: var(--blue-tint-2);
   padding: 2em;
-  border-radius: 20px;
   flex: 1 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Add spacing between elements in card */
+#plans h3 {
+  font-size: 1.5em;
+}
+
 .plan-benefits {
   margin-block: 1em;
   color: #fff;
   margin-left: 1em;
 }
 
-/* Add spacing between each benefit in the list */
 .plan-benefit {
   margin-block: 0.5em;
   list-style: circle;
 }
 
-/* Change cta button background to blue */
-.plan-cta-btn {
-  background-color: var(--blue-tint-2);
-}
-
-/*-------------------------Testimonial----------------------*/
-/* Add background colour to section */
-#testimonials {
-  background-color: var(--green-tint-3);
-}
-
-/* Change colour of the testimonials heading */
-.testimonials-heading {
-  color: var(--secondary-green);
-}
-
-/* Make testimonials display inline and scrollable */
+/*------------ Testimonials ------------*/
 #testimonials .testimonials {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-/* Style quotation mark */
 #testimonials .fa-quote-left {
-  font-size: 3rem;
+  font-size: 2em;
   margin-bottom: 1rem;
+  color: var(--orange-tint-1);
 }
 
-/* Style each testimonial */
 #testimonials li {
   padding: 2em;
   min-width: 260px;
-  border-right: 1px solid var(--green-tint-2);
 }
 
-/* Change colour of testimonial text */
 .testimonial-words {
   color: var(--green-tint-1);
 }
 
-/* Remove right border from last testimonial */
-#testimonials li:last-child {
-  border: none;
-}
-
-/* Add space between testimonials and scrollbar */
 #testimonials .testimonials {
   padding-bottom: 2rem;
 }
 
-/* Scrollbar styles */
 #testimonials .testimonials::-webkit-scrollbar {
   width: 1px;
 }
+
 #testimonials .testimonials::-webkit-scrollbar-track {
   background: var(--green-tint-2);
   border-radius: 20px;
 }
+
 #testimonials .testimonials::-webkit-scrollbar-thumb {
   background-color: var(--green-tint-1);
   border-radius: 20px;
 }
 
-/*--------------------------CTA--------------------------*/
+/*-------------- CTA --------------*/
 #cta {
   text-align: center;
-  background-color: var(--blue-tint-2);
+  padding-block: 0;
 }
+
+#cta h2 {
+  font-size: 2em;
+}
+
 .light-bulb {
   opacity: 0.2;
   max-width: 300px;
   margin-bottom: 1em;
 }
+
 .cta-description {
   padding-block: 1.5em;
+  font-size: 1.2em;
 }
 
-/*--------------------------FAQs----------------------------*/
-#faqs details:not(:nth-of-type(4)) {
-  width: 100%;
-  border-bottom: 1px solid var(--green-tint-3);
+/*---------------- FAQs ---------------*/
+#faqs .faqs-wrapper {
+  padding: 1.5em 2.3em;
+}
+
+#faqs .faqs-wrapper > *:last-child {
+  border: 0;
 }
 
 #faqs details {
-  padding: 1rem;
+  padding-block: 1em;
 }
 
-#faqs details:focus {
-  outline: none;
+#faqs .faq-answer {
+  margin-top: 1em;
+  margin-left: 1em;
 }
 
-#faqs summary {
-  padding: 1rem;
-  padding-left: 0;
-  color: var(--green-tint-3);
+/*----------------- Newsletter ----------------*/
+#newsletter {
+  background-color: var(--blue-shade);
+  padding-block: 2em;
 }
-
-/*--------------------------Footer------------------------*/
-/* Style the newsletter optin */
-.newsletter {
-  background-color: var(--green-tint-2);
+#newsletter .newsletter-heading {
+  font-size: 2em;
   text-align: center;
 }
 
-/* Increase heading font size */
-.newsletter-heading {
-  font-size: 2em;
-}
-
-/* Add space between elements */
-.newsletter-description {
+#newsletter .newsletter-description {
   color: var(--green-tint-1);
   font-size: 1.2em;
   margin-block: 1.5em;
+  text-align: center;
 }
 
-/* Style email optin button */
-.get-the-guide-btn {
+#newsletter .optin {
+  text-align: center;
+}
+
+#newsletter .get-the-guide-btn {
   color: #fff;
   font-family: "Figtree", sans-serif;
   border: none;
@@ -421,8 +414,7 @@ a {
   border-bottom-left-radius: 0;
 }
 
-/* Style the email input field */
-.email-input {
+#newsletter .email-input {
   margin-top: 1em;
   border: none;
   width: 40%;
@@ -433,48 +425,57 @@ a {
   font-family: "Figtree", sans-serif;
 }
 
-/* Remove focus styles */
-.optin input:focus {
+#newsletter .optin input:focus {
   outline: none;
 }
 
-/* Increase the font size of the links in the footer */
-.footer-link-groups {
+/*--------------- Footer -------------*/
+#footer .footer-link-groups {
   font-size: 1.3em;
 }
 
-/* Create a responsive layout for each group of links in the footer */
-.footer-link-groups .container {
+#footer .footer-link-groups .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-/* Add space after each title for each group of links in the footer and increase the font size*/
 .group-of-links-title {
   margin-bottom: 1em;
   font-size: 1.5em;
 }
 
-/* Add space beneath each footer link */
 .footer-link {
   margin-bottom: 1em;
 }
 
-/*------------------------Media queries---------------------*/
-@media screen and (min-width: 52em) {
-  #nav-links {
+#footer .socials a {
+  font-size: 1.4em;
+  margin-right: 1em;
+  color: var(--orange);
+}
+
+#footer .socials a:hover {
+  opacity: 0.9;
+}
+
+/*------------- Media queries -----------*/
+@media screen and (min-width: 56em) {
+  #navbar .nav-links {
     display: flex;
   }
+
   #hero .container {
     flex-direction: row;
     justify-content: space-between;
   }
+
   #hero .hero-container {
     flex-direction: row;
     align-items: center;
   }
-  .hero-img {
+
+  #hero .hero-img {
     max-width: 47%;
   }
 }
